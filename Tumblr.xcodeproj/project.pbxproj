@@ -19,6 +19,16 @@
 		B13545AD196876C5003D7888 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1354595196876C5003D7888 /* UIKit.framework */; };
 		B13545B5196876C5003D7888 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B13545B3196876C5003D7888 /* InfoPlist.strings */; };
 		B13545B7196876C5003D7888 /* TumblrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545B6196876C5003D7888 /* TumblrTests.m */; };
+		B13545C319687780003D7888 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545C119687780003D7888 /* MainViewController.m */; };
+		B13545C419687780003D7888 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13545C219687780003D7888 /* MainViewController.xib */; };
+		B13545C819687A3E003D7888 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545C619687A3E003D7888 /* HomeViewController.m */; };
+		B13545C919687A3E003D7888 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13545C719687A3E003D7888 /* HomeViewController.xib */; };
+		B13545CD19687A49003D7888 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545CB19687A49003D7888 /* ExploreViewController.m */; };
+		B13545CE19687A49003D7888 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13545CC19687A49003D7888 /* ExploreViewController.xib */; };
+		B13545D219687A73003D7888 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545D019687A73003D7888 /* ProfileViewController.m */; };
+		B13545D319687A73003D7888 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13545D119687A73003D7888 /* ProfileViewController.xib */; };
+		B13545D719687A7E003D7888 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545D519687A7E003D7888 /* ActivityViewController.m */; };
+		B13545D819687A7E003D7888 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13545D619687A7E003D7888 /* ActivityViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +58,21 @@
 		B13545B2196876C5003D7888 /* TumblrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TumblrTests-Info.plist"; sourceTree = "<group>"; };
 		B13545B4196876C5003D7888 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B13545B6196876C5003D7888 /* TumblrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TumblrTests.m; sourceTree = "<group>"; };
+		B13545C019687780003D7888 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B13545C119687780003D7888 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B13545C219687780003D7888 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		B13545C519687A3E003D7888 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B13545C619687A3E003D7888 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		B13545C719687A3E003D7888 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B13545CA19687A49003D7888 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
+		B13545CB19687A49003D7888 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
+		B13545CC19687A49003D7888 /* ExploreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreViewController.xib; sourceTree = "<group>"; };
+		B13545CF19687A73003D7888 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		B13545D019687A73003D7888 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		B13545D119687A73003D7888 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		B13545D419687A7E003D7888 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		B13545D519687A7E003D7888 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		B13545D619687A7E003D7888 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +134,21 @@
 			children = (
 				B13545A0196876C5003D7888 /* AppDelegate.h */,
 				B13545A1196876C5003D7888 /* AppDelegate.m */,
+				B13545C019687780003D7888 /* MainViewController.h */,
+				B13545C119687780003D7888 /* MainViewController.m */,
+				B13545C219687780003D7888 /* MainViewController.xib */,
+				B13545C519687A3E003D7888 /* HomeViewController.h */,
+				B13545C619687A3E003D7888 /* HomeViewController.m */,
+				B13545C719687A3E003D7888 /* HomeViewController.xib */,
+				B13545CA19687A49003D7888 /* ExploreViewController.h */,
+				B13545CB19687A49003D7888 /* ExploreViewController.m */,
+				B13545CC19687A49003D7888 /* ExploreViewController.xib */,
+				B13545CF19687A73003D7888 /* ProfileViewController.h */,
+				B13545D019687A73003D7888 /* ProfileViewController.m */,
+				B13545D119687A73003D7888 /* ProfileViewController.xib */,
+				B13545D419687A7E003D7888 /* ActivityViewController.h */,
+				B13545D519687A7E003D7888 /* ActivityViewController.m */,
+				B13545D619687A7E003D7888 /* ActivityViewController.xib */,
 				B13545A3196876C5003D7888 /* Images.xcassets */,
 				B1354598196876C5003D7888 /* Supporting Files */,
 			);
@@ -219,8 +259,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13545D319687A73003D7888 /* ProfileViewController.xib in Resources */,
 				B135459C196876C5003D7888 /* InfoPlist.strings in Resources */,
+				B13545C419687780003D7888 /* MainViewController.xib in Resources */,
 				B13545A4196876C5003D7888 /* Images.xcassets in Resources */,
+				B13545C919687A3E003D7888 /* HomeViewController.xib in Resources */,
+				B13545D819687A7E003D7888 /* ActivityViewController.xib in Resources */,
+				B13545CE19687A49003D7888 /* ExploreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13545CD19687A49003D7888 /* ExploreViewController.m in Sources */,
 				B13545A2196876C5003D7888 /* AppDelegate.m in Sources */,
+				B13545C319687780003D7888 /* MainViewController.m in Sources */,
 				B135459E196876C5003D7888 /* main.m in Sources */,
+				B13545D219687A73003D7888 /* ProfileViewController.m in Sources */,
+				B13545D719687A7E003D7888 /* ActivityViewController.m in Sources */,
+				B13545C819687A3E003D7888 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
