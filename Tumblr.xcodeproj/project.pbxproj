@@ -29,6 +29,7 @@
 		B13545D319687A73003D7888 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13545D119687A73003D7888 /* ProfileViewController.xib */; };
 		B13545D719687A7E003D7888 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545D519687A7E003D7888 /* ActivityViewController.m */; };
 		B13545D819687A7E003D7888 /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B13545D619687A7E003D7888 /* ActivityViewController.xib */; };
+		B13545DB19688B62003D7888 /* JCRBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B13545DA19688B62003D7888 /* JCRBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		B13545D419687A7E003D7888 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		B13545D519687A7E003D7888 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 		B13545D619687A7E003D7888 /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
+		B13545D919688B62003D7888 /* JCRBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRBlurView.h; sourceTree = "<group>"; };
+		B13545DA19688B62003D7888 /* JCRBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRBlurView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 			children = (
 				B13545A0196876C5003D7888 /* AppDelegate.h */,
 				B13545A1196876C5003D7888 /* AppDelegate.m */,
+				B13545D919688B62003D7888 /* JCRBlurView.h */,
+				B13545DA19688B62003D7888 /* JCRBlurView.m */,
 				B13545C019687780003D7888 /* MainViewController.h */,
 				B13545C119687780003D7888 /* MainViewController.m */,
 				B13545C219687780003D7888 /* MainViewController.xib */,
@@ -291,6 +296,7 @@
 				B13545D219687A73003D7888 /* ProfileViewController.m in Sources */,
 				B13545D719687A7E003D7888 /* ActivityViewController.m in Sources */,
 				B13545C819687A3E003D7888 /* HomeViewController.m in Sources */,
+				B13545DB19688B62003D7888 /* JCRBlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

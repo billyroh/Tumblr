@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JCRBlurView.h"
 
 @interface MainViewController : UIViewController
 

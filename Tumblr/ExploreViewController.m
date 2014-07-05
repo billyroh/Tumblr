@@ -9,6 +9,7 @@
 #import "ExploreViewController.h"
 
 @interface ExploreViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -26,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.scrollView.contentSize = CGSizeMake(320, 1217);
     // Do any additional setup after loading the view from its nib.
 }
 
