@@ -12,6 +12,7 @@
 #import "ProfileViewController.h"
 #import "ActivityViewController.h"
 #import "JCRBlurView.h"
+#define ARC4RANDOM_MAX 0x100000000
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *homeButton;
@@ -37,7 +38,10 @@
 @property (weak, nonatomic) IBOutlet UIView *composerVideoView;
 @property (weak, nonatomic) IBOutlet UIButton *composerDismissButton;
 - (IBAction)onComposerDismissButtonTap:(id)sender;
-
+@property (strong, nonatomic) NSArray *composerArray;
+@property (strong, nonatomic) NSArray *composerTopRowArray;
+@property (strong, nonatomic) NSArray *composerBottomRowArray;
+@property (strong, nonatomic) JCRBlurView *blurView;
 
 // View Controllers
 @property (strong, nonatomic) HomeViewController *homeViewController;
@@ -72,6 +76,9 @@
     
     self.composerView.hidden = YES;
     self.composerView.backgroundColor = [UIColor colorWithRed:51.0f/255.0f green:70.0f/255.0f blue:93.0f/255.0f alpha:0];
+    self.composerArray = @[self.composerTextView, self.composerPhotoView, self.composerQuoteView, self.composerLinkView, self.composerChatView, self.composerVideoView];
+    self.composerTopRowArray = @[self.composerTextView, self.composerPhotoView, self.composerQuoteView];
+    self.composerBottomRowArray = @[self.composerLinkView, self.composerChatView, self.composerVideoView];
     
     // tabBarView setup
     [self.homeButton setBackgroundImage:[UIImage imageNamed:@"home_selected_icon"] forState:UIControlStateSelected];
@@ -89,6 +96,7 @@
                      } completion: nil];
     
     [self onHomeButtonTap:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,12 +118,50 @@
 }
 - (IBAction)onComposeButton:(id)sender {
     self.composerView.hidden = NO;
-    JCRBlurView *blurView = [JCRBlurView new];
-    blurView.blurTintColor = self.tumblrBlue;
-    [blurView setFrame:CGRectMake(20.0f,20.0f,320.0f,568.0f)];
-    [self.composerView addSubview:blurView];
-    [self.composerView sendSubviewToBack:blurView];
-
+    self.blurView = [JCRBlurView new];
+    self.blurView.blurTintColor = self.tumblrBlue;
+    [self.blurView setFrame:CGRectMake(20.0f,20.0f,320.0f,568.0f)];
+    [self.composerView addSubview:self.blurView];
+    [self.composerView sendSubviewToBack:self.blurView];
+    self.composerDismissButton.alpha = 1;
+    
+    // Icons
+    for (UIView *composerView in self.composerArray) {
+        composerView.center = CGPointMake(composerView.center.x, 700);
+    }
+    
+    
+    for (UIView *composerView in self.composerTopRowArray) {
+        double val = ((double)arc4random() / ARC4RANDOM_MAX) * (0.5 - 0.1) + 0.1;
+        [UIView animateWithDuration:0.8
+                              delay:val
+             usingSpringWithDamping:0.95
+              initialSpringVelocity:10
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             CGPoint center = composerView.center;
+                             center.y = 229;
+                             composerView.center = center;
+                         }
+                         completion:nil
+         ];
+    }
+    
+    for (UIView *composerView in self.composerBottomRowArray) {
+        double val = ((double)arc4random() / ARC4RANDOM_MAX) * (0.5 - 0.1) + 0.1;
+        [UIView animateWithDuration:0.8
+                              delay:val
+             usingSpringWithDamping:0.95
+              initialSpringVelocity:10
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             CGPoint center = composerView.center;
+                             center.y = 229;
+                             composerView.center = center;
+                         }
+                         completion:nil
+         ];
+    }
 }
 - (IBAction)onProfileButtonTap:(id)sender {
     [self.contentView addSubview:self.profileViewController.view];
@@ -128,7 +174,49 @@
     self.activityButton.selected = YES;
 }
 - (IBAction)onComposerDismissButtonTap:(id)sender {
-    self.composerView.hidden = YES;
+    
+    for (UIView *composerView in self.composerTopRowArray) {
+        double val = ((double)arc4random() / ARC4RANDOM_MAX) * (0.5 - 0.1) + 0.1;
+        [UIView animateWithDuration:0.5
+                              delay:val
+             usingSpringWithDamping:0.95
+              initialSpringVelocity:10
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             CGPoint center = composerView.center;
+                             center.y = -50;
+                             composerView.center = center;
+                         }
+                         completion:nil
+         ];
+    }
+    
+    for (UIView *composerView in self.composerBottomRowArray) {
+        double val = ((double)arc4random() / ARC4RANDOM_MAX) * (0.5 - 0.1) + 0.1;
+        [UIView animateWithDuration:0.5
+                              delay:val
+             usingSpringWithDamping:0.95
+              initialSpringVelocity:10
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             CGPoint center = composerView.center;
+                             center.y = -50;
+                             composerView.center = center;
+                         }
+                         completion:nil
+         ];
+    }
+    
+    double delayInSeconds = 0.8;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [UIView animateWithDuration:0.3 animations:^{
+            self.blurView.alpha = 0;
+            self.composerDismissButton.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.composerView.hidden = YES;
+        }];
+    });
 }
 
 - (void)setButtonStates {
